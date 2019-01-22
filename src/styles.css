@@ -1,3 +1,15 @@
 .kanban-column {
-  background: grey;
+  border: 1px solid black;
+  height: 500px;
+}
+
+.kanban-column-header h1 {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 4px;
+  margin: 4px;
 }

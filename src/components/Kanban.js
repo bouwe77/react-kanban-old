@@ -16,7 +16,7 @@ class Kanban extends React.Component {
   render() {
     return (
       <div className="row">
-        <div class="one-third column">
+        <div className="one-third column">
           <Column
             title={CARDSTATUS.TODO}
             cards={this.state.cards.filter(
@@ -24,7 +24,7 @@ class Kanban extends React.Component {
             )}
           />
         </div>
-        <div class="one-third column">
+        <div className="one-third column">
           <Column
             title={CARDSTATUS.DOING}
             cards={this.state.cards.filter(
@@ -32,7 +32,7 @@ class Kanban extends React.Component {
             )}
           />
         </div>
-        <div class="one-third column">
+        <div className="one-third column">
           <Column
             title={CARDSTATUS.DONE}
             cards={this.state.cards.filter(

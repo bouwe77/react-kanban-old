@@ -13,6 +13,18 @@ class Kanban extends React.Component {
     };
   }
 
+  registerDraggedCard(draggedCard) {
+    // this.setState({
+    //   draggedCard: draggedCard
+    // });
+    console.log(draggedCard);
+  }
+
+  cardDroppedOnColumn(columnTitle) {
+    console.log("ja hiero");
+    console.log(columnTitle);
+  }
+
   render() {
     return (
       <div className="row">
@@ -22,6 +34,8 @@ class Kanban extends React.Component {
             cards={this.state.cards.filter(
               card => card.status === CARDSTATUS.TODO
             )}
+            cardDroppedOnColumn={this.cardDroppedOnColumn}
+            registerDraggedCard={this.registerDraggedCard}
           />
         </div>
         <div className="one-third column">
@@ -30,6 +44,7 @@ class Kanban extends React.Component {
             cards={this.state.cards.filter(
               card => card.status === CARDSTATUS.DOING
             )}
+            registerDraggedCard={this.registerDraggedCard}
           />
         </div>
         <div className="one-third column">
@@ -38,6 +53,7 @@ class Kanban extends React.Component {
             cards={this.state.cards.filter(
               card => card.status === CARDSTATUS.DONE
             )}
+            registerDraggedCard={this.registerDraggedCard}
           />
         </div>
       </div>
